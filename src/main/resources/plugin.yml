@@ -1,0 +1,26 @@
+name: MaxyGames-LinkBot
+version: '1.0'
+main: me.andrew.maxyGamesLinkBot.MaxyGamesLinkBot
+api-version: '1.21'
+authors: [ andrew ]
+description: A lightweight Discord-Minecraft linking bot with team assignment
+
+commands:
+  link:
+    description: Generate a code to link your Minecraft account with Discord
+    usage: /link
+    permission: linkbot.link
+    permission-message: You don't have permission to use this command!
+  assignteam:
+    description: Assign ALL linked users to their appropriate teams based on Discord roles
+    usage: /assignteam
+    permission: linkbot.admin
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  linkbot.link:
+    description: Allows players to generate link codes
+    default: true
+  linkbot.admin:
+    description: Allows access to admin commands
+    default: op
